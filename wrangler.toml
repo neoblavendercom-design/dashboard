@@ -5,4 +5,4 @@ pages_build_output_dir = "src"
 [[d1_databases]]
 binding = "DB"
 database_name = "staff-dashboard-db"
-database_id = "local-dev"
+database_id = "7158e537-82d3-4589-8d23-ec2f0bd9246e"
