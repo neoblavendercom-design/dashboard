@@ -5,6 +5,7 @@ const PUBLIC_ROUTES = [
   '/api/auth/google-callback',
   '/api/auth/forgot-password',
   '/api/auth/reset-password',
+  '/api/setup',
 ];
 
 function base64UrlDecode(str) {
