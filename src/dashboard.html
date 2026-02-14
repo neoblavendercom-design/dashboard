@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <h1>Staff Dashboard</h1>
+    </div>
+    <div class="header-right">
+      <button class="header-btn" id="games-btn">
+        <span>Games</span>
+      </button>
+      <button class="header-btn" id="achievements-btn">
+        <span>Badges</span>
+        <span class="badge-count" id="badge-count">0</span>
+      </button>
+      <div class="user-info">
+        <div class="avatar" id="user-avatar"></div>
+        <span class="user-name" id="user-name"></span>
+      </div>
+      <button class="logout-btn" id="logout-btn">Sign Out</button>
+      <a href="/admin.html" class="header-btn" id="admin-link" style="display:none; text-decoration:none; color:inherit;">Admin</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2 class="section-title">Your Apps</h2>
+    <div class="app-grid" id="app-grid">
+      <!-- Apps loaded dynamically -->
+    </div>
+  </main>
+
+  <!-- Games Modal -->
+  <div class="modal-overlay" id="games-overlay">
+    <div class="modal games-modal">
+      <button class="modal-close" id="games-close">&times;</button>
+      <div class="games-header">
+        <h2>Mini Games</h2>
+        <div class="plays-counter" id="plays-counter">Loading...</div>
+      </div>
+      <div class="games-grid" id="games-grid">
+        <!-- Games loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Play Modal -->
+  <div class="modal-overlay" id="game-play-overlay">
+    <div class="modal game-modal" id="game-modal">
+      <div class="game-topbar">
+        <span class="game-title" id="game-title"></span>
+        <div class="game-stats">
+          <div class="game-stat">
+            <div class="stat-value" id="game-score">0</div>
+            <div class="stat-label">Score</div>
+          </div>
+          <div class="game-stat">
+            <div class="stat-value" id="game-timer">60</div>
+            <div class="stat-label">Time</div>
+          </div>
+          <div class="game-stat">
+            <div class="stat-value" id="game-combo">1x</div>
+            <div class="stat-label">Combo</div>
+          </div>
+        </div>
+        <button class="modal-close" id="game-close">&times;</button>
+      </div>
+      <div class="game-area" id="game-area">
+        <!-- Game content rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Achievements Modal -->
+  <div class="modal-overlay" id="achievements-overlay">
+    <div class="modal achievements-modal">
+      <button class="modal-close" id="achievements-close">&times;</button>
+      <h2>Achievements</h2>
+      <div class="streak-display" id="streak-display"></div>
+      <div id="achievements-list">
+        <!-- Achievements loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="/js/games/engine.js"></script>
+  <script src="/js/games/whack.js"></script>
+  <script src="/js/games/memory.js"></script>
+  <script src="/js/games/typing.js"></script>
+  <script src="/js/games/stroop.js"></script>
+  <script src="/js/games/pattern.js"></script>
+  <script src="/js/achievements.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Dashboard - Admin</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <h1>Admin Panel</h1>
+    </div>
+    <div class="header-right">
+      <a href="/dashboard.html" class="header-btn" style="text-decoration:none; color:inherit;">Dashboard</a>
+      <div class="user-info">
+        <div class="avatar" id="user-avatar"></div>
+        <span class="user-name" id="user-name"></span>
+      </div>
+      <button class="logout-btn" id="logout-btn">Sign Out</button>
+    </div>
+  </header>
+
+  <div class="admin-layout">
+    <!-- Sidebar -->
+    <nav class="admin-sidebar">
+      <button class="admin-nav-item active" data-tab="users">Users</button>
+      <button class="admin-nav-item" data-tab="apps">Apps</button>
+      <button class="admin-nav-item" data-tab="roles">Roles</button>
+      <button class="admin-nav-item" data-tab="settings">Game Settings</button>
+    </nav>
+
+    <!-- Content -->
+    <div class="admin-content" id="admin-content">
+      <!-- Dynamic content -->
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="modal-overlay" id="form-overlay">
+    <div class="modal admin-form-modal" id="form-modal">
+      <button class="modal-close" id="form-close">&times;</button>
+      <div id="form-content"></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

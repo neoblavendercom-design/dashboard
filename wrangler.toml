@@ -1,0 +1,8 @@
+name = "staff-dashboard"
+compatibility_date = "2024-12-01"
+pages_build_output_dir = "src"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "staff-dashboard-db"
+database_id = "local-dev"

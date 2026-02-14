@@ -1,0 +1,15 @@
+{
+  "name": "staff-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev src --d1=DB --local --port 8788",
+    "deploy": "wrangler pages deploy src",
+    "migrate": "wrangler d1 execute staff-dashboard-db --local --file=migrations/0001_schema.sql",
+    "seed": "wrangler d1 execute staff-dashboard-db --local --file=scripts/seed.sql",
+    "setup": "npm run migrate && npm run seed"
+  },
+  "dependencies": {
+    "wrangler": "^3.99.0"
+  }
+}
