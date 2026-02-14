@@ -9,7 +9,7 @@
     "seed": "wrangler d1 execute staff-dashboard-db --local --file=scripts/seed.sql",
     "setup": "npm run migrate && npm run seed"
   },
-  "dependencies": {
-    "wrangler": "^3.99.0"
+  "devDependencies": {
+    "wrangler": "^4.65.0"
   }
 }
