@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
@@ -24,8 +27,8 @@
         <div class="avatar" id="user-avatar"></div>
         <span class="user-name" id="user-name"></span>
       </div>
-      <button class="logout-btn" id="logout-btn">Sign Out</button>
       <a href="/admin.html" class="header-btn" id="admin-link" style="display:none; text-decoration:none; color:inherit;">Admin</a>
+      <button class="logout-btn" id="logout-btn">Sign Out</button>
     </div>
   </header>
 
@@ -78,8 +81,8 @@
     </div>
   </div>
 
-  <!-- Achievements Modal -->
-  <div class="modal-overlay" id="achievements-overlay">
+  <!-- Achievements Panel (slides in from right) -->
+  <div class="modal-overlay achievements-overlay" id="achievements-overlay">
     <div class="modal achievements-modal">
       <button class="modal-close" id="achievements-close">&times;</button>
       <h2>Achievements</h2>
